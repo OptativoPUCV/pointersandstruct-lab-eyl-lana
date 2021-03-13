@@ -81,10 +81,11 @@ typedef struct {
 } Vector;
 
 Vector * crearVector(int n) {
-  Vector *creacionAUX = (Vector *) malloc (sizeof(Vector));
+  /*Vector *creacionAUX = (Vector *) malloc (sizeof(Vector));
   n = creacionAUX->capacidad;
   Vector *creacion = (Vector *) calloc (n, sizeof(Vector));
-  return creacion;
+  return creacion;*/
+  return NULL;
 }
 
 /*
@@ -93,7 +94,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-
+  //v.datos[i] = valor;
 }
 
 /*
