@@ -83,6 +83,9 @@ typedef struct {
 Vector * crearVector(int n) {
   Vector *creacion = (Vector *) calloc (n, sizeof(Vector));
   creacion->capacidad = n;
+  for (int i = 0 ; i < n ; i++){
+    if (creacion->datos[i] != 0) creacion->datos = 0;
+  }
   return creacion;
 }
 
