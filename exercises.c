@@ -126,7 +126,10 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
   int **cptr;
   cptr = &(c->datos);
 
-  **cptr = **aptr + **bptr;
+  int n = a->capacidad;
+  for (int i = 0 ; i < n ; i++){
+    **cptr = **aptr + **bptr;
+  }
 
   /*int i = 0;
   while ( i < b->capacidad){
