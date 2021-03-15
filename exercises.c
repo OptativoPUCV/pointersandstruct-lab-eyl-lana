@@ -121,13 +121,13 @@ actualiza el vector `c` con el resultado de la suma.
 void sumaV(Vector * a, Vector * b, Vector * c) {
   int **aptr;
   aptr = &(a->datos);
-  *aptr = (a->datos);
+  **aptr = *(a->datos);
   int **bptr;
   bptr = &(b->datos);
-  *bptr = (b->datos);
+  **bptr = *(b->datos);
   int **cptr;
   cptr = &(c->datos);
-  *cptr = (c->datos);
+  **cptr = *(c->datos);
 
   int n = a->capacidad;
   for (int i = 0 ; i < n ; i++){
