@@ -121,7 +121,7 @@ actualiza el vector `c` con el resultado de la suma.
 void sumaV(Vector * a, Vector * b, Vector * c) {
 
   for (int i = 0 ; i < a->capacidad ; i++){
-    *(c->datos+i) = *(a->datos+i) + *(b->datos+i);
+    *(c->datos + i) = *(a->datos + i) + *(b->datos + i);
   }
 
   /*int i = 0;
@@ -147,8 +147,7 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
 
   for(int i = 0 ; i < c->capacidad ; i++){
     *(c->datos + i) = *ptr1 + *ptr2;
-    *ptr1 = a2;
-    *ptr2 = b2;
+    *ptr1 = a2, *ptr2 = b2;
   }
 
   /*c->capacidad = 2;
