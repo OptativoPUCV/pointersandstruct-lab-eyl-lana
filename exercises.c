@@ -129,10 +129,11 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
   cptr = &(c->datos);
   **cptr = *(c->datos);
 
-  int n = a->capacidad;
+  /*int n = a->capacidad;
   for (int i = 0 ; i < n ; i++){
     **cptr = **aptr + **bptr;
-  }
+  }*/
+  **cptr = **aptr + **bptr;
 
   /*int i = 0;
   while ( i < b->capacidad){
