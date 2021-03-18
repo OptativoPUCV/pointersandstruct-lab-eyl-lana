@@ -145,7 +145,7 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
   *ptr2 = b1;
 
   for(int i = 0 ; i < 2 ; i++){
-    *(c->datos + 1) = *ptr1 + *ptr2;
+    *(c->datos + i) = *ptr1 + *ptr2;
     *ptr1 = a2;
     *ptr2 = b2;
   }
