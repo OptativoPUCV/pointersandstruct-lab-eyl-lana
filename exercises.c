@@ -125,7 +125,18 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
-  int *ptr1, *ptr2;
+  Vector* vectorA = crearVector(2);
+  Vector* vectorB = crearVector(2);
+  asignarValor(vectorA, 0, a1);
+  asignarValor(vectorB, 0, b1);
+  asignarValor(vectorA, 1, a2);
+  asignarValor(vectorB, 1, b2);
+
+  for (int i = 0 ; i < c->capacidad ; i++){
+    c->datos[i] = vectorA->datos[i] + vectorB->datos[i];
+  }
+
+  /*int *ptr1, *ptr2;
 
   ptr1 = &a1;
   *ptr1 = a1;
@@ -136,9 +147,6 @@ void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
   for(int i = 0 ; i < c->capacidad ; i++){
     *(c->datos + i) = *ptr1 + *ptr2;
     *ptr1 = a2, *ptr2 = b2;
-  }
+  }*/
 
-  /*c->capacidad = 2;
-  c->datos[0] = a1 + b1;
-  c->datos[1] = a2 + b2;*/
 }
